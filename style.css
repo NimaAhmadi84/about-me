@@ -9,9 +9,10 @@ body, ul, li, a {
 /* Basic body style */
 body {
     font-family: Arial, sans-serif;
-    background-color: #2a73cc; /* Ensure the body background color matches the particles-js */
-    position: relative; /* To allow absolute positioning of particles-js */
-    min-height: 100vh; /* Ensure the body covers the full height of the viewport */
+    background-color: #2a73cc;
+    position: relative;
+    min-height: 100vh;
+    font-size: 16px; /* Base font size */
 }
 
 /* Navbar styles */
@@ -27,29 +28,29 @@ body {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    z-index: 1; /* Ensure the navbar stays above particles-js */
+    z-index: 1;
 }
 
 .nav-list {
     display: flex;
     align-items: center;
     width: 100%;
-    justify-content: flex-start; /* Align items to the left */
-    padding-left: 20px; /* Add padding to the left side */
+    justify-content: flex-start;
+    padding-left: 20px;
 }
 
 .nav-list li {
     display: flex;
-    flex-direction: column; /* Arrange icon and text vertically */
+    flex-direction: column;
     align-items: center;
-    margin-right: 30px; /* Increase space between icons */
-    position: relative; /* For tooltip positioning */
+    margin-right: 30px;
+    position: relative;
 }
 
 .nav-list a {
     color: white;
     font-size: 24px;
-    text-align: center; /* Center align text */
+    text-align: center;
 }
 
 .nav-list i {
@@ -58,17 +59,17 @@ body {
 
 .nav-list span {
     font-size: 14px;
-    margin-top: 5px; /* Space between icon and text */
+    margin-top: 5px;
 }
 
 /* Title in the navbar */
 .nav-title {
-    margin-left: auto; /* Move title to the right */
-    padding-left: 20px; /* Add padding to the left of the title */
+    margin-left: auto;
+    padding-left: 20px;
     color: white;
     font-size: 1.2em;
-    white-space: nowrap; /* Prevent title from wrapping */
-    font-family: 'Lobster', cursive; /* Apply the new font */
+    white-space: nowrap;
+    font-family: 'Lobster', cursive;
 }
 
 /* Search container styling */
@@ -78,17 +79,17 @@ body {
 }
 
 .search-input {
-    width: 250px; /* Adjust the width of the input */
+    width: 250px;
     margin-left: 10px;
     padding: 5px 10px;
-    display: none; /* Initially hidden */
+    display: none;
     font-size: 16px;
     border: none;
     border-radius: 4px;
 }
 
 .search-input.show {
-    display: block; /* Show the input */
+    display: block;
 }
 
 /* Style for the particles background */
@@ -96,8 +97,8 @@ body {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: #2a73cc; /* Ensure particles-js has the same background color as the body */
-    z-index: 0; /* Ensure it stays behind other elements */
+    background-color: #2a73cc;
+    z-index: 0;
 }
 
 /* Profile container styling */
@@ -108,14 +109,14 @@ body {
     justify-content: center;
     text-align: center;
     color: white;
-    position: relative; /* Ensure it is positioned above particles-js */
-    z-index: 2; /* Ensure it is above particles-js */
-    pointer-events: none; /* Disable interactions for the container */
-    margin-top: 150px; /* Adjust the margin to place it correctly */
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+    margin-top: 150px;
 }
 
 .profile-container h1, .profile-container p {
-    pointer-events: all; /* Enable interactions for text */
+    pointer-events: all;
 }
 
 .profile-pic {
@@ -125,11 +126,11 @@ body {
     object-fit: cover;
     margin-bottom: 20px;
     pointer-events: all;
-    transition: transform 0.1s ease-in-out; /* Add transition for smooth animation */
+    transition: transform 0.1s ease-in-out;
 }
 
 .profile-pic:hover {
-    transform: translateY(-10px); /* Move the image up by 10px */
+    transform: translateY(-10px);
 }
 
 /* YouTube icon styling */
@@ -139,14 +140,14 @@ body {
 
 .youtube-icon a {
     color: white;
-    font-size: 48px; /* Larger size for YouTube icon */
-    transition: transform 0.3s, color 0.3s; /* Add transition for smooth animation */
-    pointer-events: all; /* Enable interactions for the YouTube icon */
+    font-size: 48px;
+    transition: transform 0.3s, color 0.3s;
+    pointer-events: all;
 }
 
 .youtube-icon a:hover {
-    color: #ff0000; /* Change color on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    color: #ff0000;
+    transform: scale(1.1);
 }
 
 /* Social icons styling */
@@ -158,28 +159,28 @@ body {
 
 .social-icons a {
     color: white;
-    font-size: 30px; /* Increase size for other social icons */
-    margin: 0 15px; /* Increase spacing between icons */
+    font-size: 30px;
+    margin: 0 15px;
     transition: transform 0.3s, color 0.3s;
-    pointer-events: all; /* Enable interactions for the social icons */
+    pointer-events: all;
 }
 
 .social-icons a:hover {
     transform: scale(1.1);
-    color: #ffcc00; /* Change to yellow on hover */
+    color: #ffcc00;
 }
 
 /* Button container styling */
 .button-container {
     display: flex;
-    flex-wrap: wrap; /* Allow buttons to wrap to next line */
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
-    pointer-events: all; /* Enable interactions for the buttons */
+    pointer-events: all;
 }
 
 .custom-button {
-    background-color: #042247; /* Red color for buttons */
+    background-color: #042247;
     color: white;
     padding: 10px 20px;
     margin: 10px;
@@ -187,18 +188,18 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    pointer-events: all; /* Ensure buttons are clickable */
+    pointer-events: all;
 }
 
 .custom-button:hover {
-    background-color: #738192; /* Darker red on hover */
+    background-color: #738192;
 }
 
 /* Adding new styles for the resume and skills section */
 .container {
     width: 80%;
     max-width: 1000px;
-    margin: 20px auto; /* Adjusted margin for proper spacing */
+    margin: 20px auto;
     background-color: white;
     border-radius: 8px;
     padding: 20px;
@@ -227,7 +228,7 @@ body {
 
 .resume-button:hover {
     background-color: #738192;
-    transform: translateX(10px); /* Slide to the right on hover */
+    transform: translateX(10px);
 }
 
 .resume-button::before {
@@ -242,7 +243,7 @@ body {
 }
 
 .resume-button:hover::before {
-    left: 100%; /* Slide from left to right on hover */
+    left: 100%;
 }
 
 .skills {
@@ -271,28 +272,103 @@ body {
     height: 100%;
     border-radius: 10px;
 }
-/* Navbar styles for smaller screens */
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .profile-container {
+        margin-top: 100px;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-list {
-        flex-direction: column; /* Arrange items vertically */
-        align-items: flex-start; /* Align items to the left */
-        padding-left: 10px; /* Reduce padding */
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10px;
     }
 
     .nav-list li {
-        margin-right: 0; /* Remove margin between items */
-        margin-bottom: 10px; /* Add space between items */
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
     .nav-title {
-        display: none; /* Hide the title on small screens */
+        display: none;
     }
 
     .search-container {
-        width: 100%; /* Full width for search container */
+        width: 100%;
     }
 
     .search-input {
-        width: 100%; /* Full width for search input */
+        width: 100%;
+    }
+
+    .profile-container {
+        margin-top: 50px;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-container h1 {
+        font-size: 1.5em;
+    }
+
+    .profile-container p {
+        font-size: 1em;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .custom-button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .profile p {
+        font-size: 1em;
+    }
+
+    .resume-button {
+        width: 100%;
+    }
+
+    .skill span {
+        font-size: 0.9em;
+    }
+
+    .progress-bar {
+        height: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        margin-top: 50px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+        margin: 0 5px;
     }
 }
