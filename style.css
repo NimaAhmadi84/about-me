@@ -271,3 +271,28 @@ body {
     height: 100%;
     border-radius: 10px;
 }
+/* Navbar styles for smaller screens */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column; /* Arrange items vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding-left: 10px; /* Reduce padding */
+    }
+
+    .nav-list li {
+        margin-right: 0; /* Remove margin between items */
+        margin-bottom: 10px; /* Add space between items */
+    }
+
+    .nav-title {
+        display: none; /* Hide the title on small screens */
+    }
+
+    .search-container {
+        width: 100%; /* Full width for search container */
+    }
+
+    .search-input {
+        width: 100%; /* Full width for search input */
+    }
+}
