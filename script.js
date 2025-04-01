@@ -1,8 +1,8 @@
-// script.js
+// Initialize particles.js
 particlesJS("particles-js", {
     "particles": {
         "number": {
-            "value": 80,
+            "value": 60,
             "density": {
                 "enable": true,
                 "value_area": 800
@@ -16,19 +16,11 @@ particlesJS("particles-js", {
             "stroke": {
                 "width": 0,
                 "color": "#000000"
-            },
-            "polygon": {
-                "nb_sides": 5
-            },
-            "image": {
-                "src": "img/github.svg",
-                "width": 100,
-                "height": 100
             }
         },
         "opacity": {
             "value": 0.5,
-            "random": false,
+            "random": true,
             "anim": {
                 "enable": false,
                 "speed": 1,
@@ -48,14 +40,14 @@ particlesJS("particles-js", {
         },
         "line_linked": {
             "enable": true,
-            "distance": 150,
+            "distance": 120,
             "color": "#ffffff",
-            "opacity": 0.4,
+            "opacity": 0.3,
             "width": 1
         },
         "move": {
             "enable": true,
-            "speed": 6,
+            "speed": 4,
             "direction": "none",
             "random": false,
             "straight": false,
@@ -96,7 +88,7 @@ particlesJS("particles-js", {
                 "speed": 3
             },
             "repulse": {
-                "distance": 200,
+                "distance": 100,
                 "duration": 0.4
             },
             "push": {
@@ -110,26 +102,125 @@ particlesJS("particles-js", {
     "retina_detect": true
 });
 
-// Adding mousemove interaction for profile-pic
-// Toggle search input visibility
+// Mobile menu toggle
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const navList = document.querySelector('.nav-list');
+
+mobileMenuToggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+    mobileMenuToggle.innerHTML = navList.classList.contains('active') ? 
+        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+});
+
+// Close menu when clicking on a link
+document.querySelectorAll('.nav-list a').forEach(link => {
+    link.addEventListener('click', () => {
+        navList.classList.remove('active');
+        mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    });
+});
+
+// Search toggle functionality
 const searchToggle = document.querySelector('.search-toggle');
 const searchInput = document.querySelector('.search-input');
 
-searchToggle.addEventListener('click', () => {
+searchToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
     searchInput.classList.toggle('show');
-    searchInput.focus();
+    if (searchInput.classList.contains('show')) {
+        searchInput.focus();
+    }
+});
+
+// Close search when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.search-container')) {
+        searchInput.classList.remove('show');
+    }
 });
 
 // Profile picture hover effect
 const profilePic = document.querySelector('.profile-pic');
+let isHovering = false;
 
-document.addEventListener('mousemove', (e) => {
-    const x = (e.clientX / window.innerWidth) * 20 - 10;
-    const y = (e.clientY / window.innerHeight) * 20 - 10;
-    profilePic.style.transform = `translate(${x}px, ${y}px)`;
+profilePic.addEventListener('mouseenter', () => {
+    isHovering = true;
 });
 
-// Reset position when mouse leaves the window
-document.addEventListener('mouseleave', () => {
-    profilePic.style.transform = `translate(0, 0)`;
+profilePic.addEventListener('mouseleave', () => {
+    isHovering = false;
+    profilePic.style.transform = 'scale(1)';
+});
+
+document.addEventListener('mousemove', (e) => {
+    if (isHovering && window.innerWidth > 768) {
+        const x = (e.clientX / window.innerWidth) * 20 - 10;
+        const y = (e.clientY / window.innerHeight) * 20 - 10;
+        profilePic.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+    }
+});
+
+// Animate progress bars when they come into view
+const progressBars = document.querySelectorAll('.progress');
+
+const animateProgressBars = () => {
+    progressBars.forEach(bar => {
+        const rect = bar.getBoundingClientRect();
+        const isVisible = (rect.top <= window.innerHeight && rect.bottom >= 0);
+        
+        if (isVisible && !bar.dataset.animated) {
+            const width = bar.style.width;
+            bar.style.width = '0';
+            setTimeout(() => {
+                bar.style.width = width;
+            }, 100);
+            bar.dataset.animated = 'true';
+        }
+    });
+};
+
+// Set initial progress values
+document.querySelectorAll('.progress').forEach(bar => {
+    const width = bar.style.width;
+    bar.setAttribute('data-progress', width);
+});
+
+// Initial check
+animateProgressBars();
+
+// Check on scroll
+window.addEventListener('scroll', animateProgressBars);
+
+// Responsive adjustments
+function handleResize() {
+    if (window.innerWidth > 768) {
+        navList.classList.remove('active');
+        mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+}
+
+window.addEventListener('resize', handleResize);
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Button hover effects
+document.querySelectorAll('.custom-button, .resume-button').forEach(button => {
+    button.addEventListener('mouseenter', () => {
+        button.style.transform = 'translateY(-3px)';
+        button.style.boxShadow = '0 8px 15px rgba(0, 0, 0, 0.2)';
+    });
+    
+    button.addEventListener('mouseleave', () => {
+        button.style.transform = 'translateY(0)';
+        button.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+    });
 });
