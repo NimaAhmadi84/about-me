@@ -3,73 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نیما احمدی - توسعه دهنده بک‌اند</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
-    <title>About Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <header class="navbar">
-        <nav class="nav-container">
-            <ul class="nav-list">
-                <li><a href="#"><i class="fas fa-comments"></i><span>چت</span></a></li>
-                <li><a href="#"><i class="fas fa-info-circle"></i><span>اطلاعات</span></a></li>
-                <li><a href="#"><i class="fas fa-graduation-cap"></i><span>آموزش</span></a></li>
-                <li><a href="#"><i class="fas fa-home"></i><span>خانه</span></a></li>
-                <li><a href="#"><i class="fas fa-user"></i><span>پروفایل</span></a></li>
-                <li class="search-container">
-                    <i class="fas fa-search"></i>
-                    <input type="text" class="search-input show" placeholder="جستجو...">
-                </li>
-                <li class="nav-title">وبسایت شخصی نیما احمدی</li>
-            </ul>
-        </nav>
-    </header>
     <div id="particles-js"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="nav-title">نیما احمدی</span>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        <span>خانه</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user"></i>
+                        <span>درباره من</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-code"></i>
+                        <span>مهارت‌ها</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-briefcase"></i>
+                        <span>نمونه کارها</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-envelope"></i>
+                        <span>تماس با من</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="search-container">
+                <div class="search-toggle">
+                    <i class="fas fa-search"></i>
+                </div>
+                <input type="text" class="search-input" placeholder="جستجو...">
+            </div>
+        </div>
+    </nav>
+
     <div class="profile-container">
-        <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+        <img src="images/profile.jpg" alt="نیما احمدی" class="profile-pic">
         <h1>نیما احمدی</h1>
-        <p>برنامه‌نویس سرور(بک اند)</p>
-        <div class="youtube-icon">
-            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
+        <p>توسعه دهنده بک‌اند | متخصص لاراول</p>
+        
         <div class="social-icons">
-            <a href="#" target="_blank"><i class="fab fa-pinterest"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
+        
         <div class="button-container">
-            <a href="#" class="custom-button">تعرفه طراحی و پشتیبانی</a>
-            <a href="#" class="custom-button">فرم سفارش طراحی</a>
-            <a href="#" class="custom-button">استخدام من</a>
+            <button class="custom-button">دانلود رزومه</button>
+            <button class="custom-button">تماس با من</button>
         </div>
     </div>
 
-    <!-- Adding the new resume and skills section -->
+    <!-- بخش رزومه جدید -->
     <div class="container">
         <div class="profile">
-            <p>من نیما احمدی هستم!<br> با ۱۵ سال سابقه‌ی فعالیت در حوزه‌ی IT و بیش از ۵ سال در حوزه‌ی طراحی وب و کسب و کارهای آنلاین.<br> خوشحالم از اینکه از سایت من بازدید می‌کنید.</p>
-            <button class="resume-button">دانلود رزومه من</button>
-        </div>
-        <div class="skills">
-            <div class="skill">
-                <span>آی تی</span>
-                <div class="progress-bar">
-                    <div style="width: 50%; background-color: orange;"></div>
+            <h1>من نیما احمدی هستم!</h1>
+            <p>توسعه‌دهنده بک‌اند با اشتیاق و تعهد کاری بالا</p>
+            
+            <div class="about-me">
+                <h2>👨‍💻 درباره من</h2>
+                <p>سلام! من نیما احمدی هستم، یک توسعه‌دهنده جوان و پرتلاش ۱۸ ساله با عشقِ عمیق به دنیای برنامه‌نویسی بک‌اند. از وقتی کدنویسی را شروع کردم، این مسیر برایم فقط یک شغل نبوده، بلکه یک دغدغه شخصی است. وقتی پروژه‌ای را شروع می‌کنم، تا رسیدن به نتیجه‌ای بینقص (حتی اگر شب‌بیداری بخواهد!) دست از تلاش برنمی‌دارم. تعهد کاری من، تفاوت اصلی‌ام است.</p>
+            </div>
+            
+            <div class="skills">
+                <h2>🛠️ مهارت‌های فنی</h2>
+                
+                <div class="skill">
+                    <span>PHP (تسلط بالا)</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%; background-color: #4a89dc;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <span>Laravel (تخصص اصلی)</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%; background-color: #ff6b6b;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%; background-color: #48cfad;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <span>MySQL/SQL</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%; background-color: #5d9cec;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <span>HTML/CSS</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%; background-color: #a0d468;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <span>API Development</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%; background-color: #ec87c0;"></div>
+                    </div>
                 </div>
             </div>
-            <div class="skill">
-                <span>برنامه نویسی وب</span>
-                <div class="progress-bar">
-                    <div style="width: 30%; background-color: limegreen;"></div>
-                </div>
+            
+            <div class="why-me">
+                <h2>🎯 چرا من؟</h2>
+                <ul>
+                    <li><strong>تعهد ۱۰۰٪:</strong> پروژه‌های کارفرما برایم مثل پروژه‌های شخصی‌ام هستند. موفقیت شما، موفقیت من است!</li>
+                    <li><strong>یادگیری سریع:</strong> با وجود سن کم، به‌خاطر پشتکار بالا و خودآموزی، در Laravel و PHP حرفه‌ای عمل می‌کنم.</li>
+                    <li><strong>حل‌مسئله محور:</strong> عاشق چالش‌های فنی هستم و همیشه راه‌حلی بهینه ارائه می‌دهم.</li>
+                </ul>
             </div>
-            <div class="skill">
-                <span>مشاوره حوزه ی کسب و کارهای آنلاین</span>
-                <div class="progress-bar">
-                    <div style="width: 80%; background-color: blue;"></div>
-                </div>
+            
+            <div class="education">
+                <h2>📚 سوابق تحصیلی</h2>
+                <p>دیپلم شبکه و نرم‌افزار | هنرستان مقیمی (۱۳۹۹-۱۴۰۲)</p>
+                <p>کارشناسی مهندسی کامپیوتر | دانشگاه آزاد (از ۱۴۰۳)</p>
+            </div>
+            
+            <div class="vision">
+                <h2>💡 چشم‌انداز شغلی</h2>
+                <p>هدفم این است که به یک توسعه‌دهنده بک‌اند سطح‌بالا تبدیل شوم و با فناوری‌های مدرن (مثل میکروسرویس‌ها یا Node.js) نیز آشنا شوم. به‌عنوان یک فرد تیم‌پذیر و کنجکاو، مشتاقم در پروژه‌های چالشی همکاری کنم.</p>
+            </div>
+            
+            <div class="contact">
+                <h2>📞 تماس با من</h2>
+                <p>آماده‌ام تا در مورد پروژه‌تان گفت‌وگو کنم! کافیست یک پیام بفرستید تا با انرژی و تمرکز بالا، اجرای ایده‌هایتان را شروع کنیم.</p>
+                <button class="resume-button">ارسال پیام</button>
+            </div>
+            
+            <div class="quote">
+                <p>"کدهای من فقط برنامه نیستند، تعهد من به کیفیت و نتیجه‌گیری هستند."</p>
             </div>
         </div>
     </div>
